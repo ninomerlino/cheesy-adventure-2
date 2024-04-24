@@ -1,0 +1,245 @@
+[gd_scene load_steps=29 format=3 uid="uid://t5b1j12sloyu"]
+
+[ext_resource type="Texture2D" uid="uid://c058iqbbx7w00" path="res://textures/main_title.png" id="1_n7ame"]
+[ext_resource type="Script" path="res://main_menu.gd" id="1_n7ixq"]
+[ext_resource type="Theme" uid="uid://bpj776m3gkae4" path="res://main_theme.tres" id="3_8yggu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ioaa"]
+atlas = ExtResource("1_n7ame")
+region = Rect2(0, 0, 256, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5wki"]
+atlas = ExtResource("1_n7ame")
+region = Rect2(0, 32, 256, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5oxtu"]
+atlas = ExtResource("1_n7ame")
+region = Rect2(0, 64, 256, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dkye"]
+atlas = ExtResource("1_n7ame")
+region = Rect2(0, 96, 256, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11c2y"]
+atlas = ExtResource("1_n7ame")
+region = Rect2(0, 128, 256, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bt1h"]
+atlas = ExtResource("1_n7ame")
+region = Rect2(0, 160, 256, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nipxb"]
+atlas = ExtResource("1_n7ame")
+region = Rect2(0, 192, 256, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7s2c"]
+atlas = ExtResource("1_n7ame")
+region = Rect2(0, 224, 256, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ylc5"]
+atlas = ExtResource("1_n7ame")
+region = Rect2(0, 256, 256, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldx5m"]
+atlas = ExtResource("1_n7ame")
+region = Rect2(0, 0, 256, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62scv"]
+atlas = ExtResource("1_n7ame")
+region = Rect2(0, 32, 256, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbhae"]
+atlas = ExtResource("1_n7ame")
+region = Rect2(0, 64, 256, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwrgn"]
+atlas = ExtResource("1_n7ame")
+region = Rect2(0, 96, 256, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xybs4"]
+atlas = ExtResource("1_n7ame")
+region = Rect2(0, 128, 256, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0x03l"]
+atlas = ExtResource("1_n7ame")
+region = Rect2(0, 160, 256, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxj1j"]
+atlas = ExtResource("1_n7ame")
+region = Rect2(0, 192, 256, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nh36t"]
+atlas = ExtResource("1_n7ame")
+region = Rect2(0, 224, 256, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oilef"]
+atlas = ExtResource("1_n7ame")
+region = Rect2(0, 256, 256, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e74od"]
+animations = [{
+"frames": [{
+"duration": 40.0,
+"texture": SubResource("AtlasTexture_3ioaa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a5wki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5oxtu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dkye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11c2y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bt1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nipxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c7s2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ylc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldx5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62scv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bbhae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dwrgn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xybs4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0x03l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxj1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nh36t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oilef")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="InputEventAction" id="InputEventAction_5loyt"]
+action = &"start"
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_875bd"]
+events = [SubResource("InputEventAction_5loyt")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_aergw"]
+action = &"options"
+
+[sub_resource type="Shortcut" id="Shortcut_efpdt"]
+events = [SubResource("InputEventAction_aergw")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_husgv"]
+action = &"exit"
+
+[sub_resource type="Shortcut" id="Shortcut_v40so"]
+events = [SubResource("InputEventAction_husgv")]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n7ixq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 800.0
+color = Color(0.27451, 0.32549, 0.384314, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ColorRect"]
+position = Vector2(396, 101.64)
+scale = Vector2(2.59375, 3.8975)
+sprite_frames = SubResource("SpriteFrames_e74od")
+frame_progress = 0.3149
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 16.0
+offset_right = 296.0
+offset_bottom = 40.0
+color = Color(0.27451, 0.32549, 0.384314, 1)
+
+[node name="play" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.0
+offset_top = -96.0
+offset_right = 264.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_top = NodePath("../exit")
+focus_neighbor_bottom = NodePath("../options")
+focus_next = NodePath("../options")
+focus_previous = NodePath("../exit")
+focus_mode = 0
+theme = ExtResource("3_8yggu")
+shortcut = SubResource("Shortcut_875bd")
+text = "Play"
+
+[node name="options" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 400.0
+offset_right = 664.0
+offset_bottom = 464.0
+focus_neighbor_top = NodePath("../play")
+focus_neighbor_bottom = NodePath("../exit")
+focus_next = NodePath("../exit")
+focus_previous = NodePath("../play")
+focus_mode = 0
+theme = ExtResource("3_8yggu")
+shortcut = SubResource("Shortcut_efpdt")
+text = "Options
+"
+
+[node name="exit" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 496.0
+offset_right = 664.0
+offset_bottom = 560.0
+focus_neighbor_top = NodePath("../options")
+focus_neighbor_bottom = NodePath("../play")
+focus_next = NodePath("../play")
+focus_previous = NodePath("../options")
+focus_mode = 0
+theme = ExtResource("3_8yggu")
+shortcut = SubResource("Shortcut_v40so")
+text = "Exit
+"
+
+[connection signal="pressed" from="ColorRect/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="ColorRect/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="ColorRect/exit" to="." method="_on_exit_pressed"]

@@ -1,0 +1,83 @@
+[gd_scene load_steps=5 format=3 uid="uid://dffhj7ka3aj8m"]
+
+[ext_resource type="Script" path="res://options.gd" id="1_6mste"]
+[ext_resource type="Theme" uid="uid://bpj776m3gkae4" path="res://main_theme.tres" id="1_qu2t4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_krok1"]
+font_size = 60
+
+[sub_resource type="LabelSettings" id="LabelSettings_ahmdh"]
+font_size = 40
+
+[node name="Control" type="Control" node_paths=PackedStringArray("volume_show_percentage")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6mste")
+volume_show_percentage = NodePath("ColorRect/VBoxContainer/HBoxContainer/ProgressBar")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 800.0
+color = Color(0.27451, 0.32549, 0.384314, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 128.0
+grow_horizontal = 2
+theme = ExtResource("1_qu2t4")
+text = "Options"
+label_settings = SubResource("LabelSettings_krok1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 2
+offset_left = 40.0
+offset_top = 128.0
+offset_right = 768.0
+offset_bottom = 800.0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_qu2t4")
+text = "Volume"
+label_settings = SubResource("LabelSettings_ahmdh")
+
+[node name="volume_down" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_qu2t4")
+text = "-"
+
+[node name="volume_up" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_qu2t4")
+text = "+"
+
+[node name="ProgressBar" type="ProgressBar" parent="ColorRect/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme = ExtResource("1_qu2t4")
+value = 50.0
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/HBoxContainer/volume_down" to="." method="_on_volume_down_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/HBoxContainer/volume_up" to="." method="_on_volume_up_pressed"]
