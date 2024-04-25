@@ -1,10 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://dffhj7ka3aj8m"]
+[gd_scene load_steps=7 format=3 uid="uid://dffhj7ka3aj8m"]
 
 [ext_resource type="Script" path="res://options.gd" id="1_6mste"]
 [ext_resource type="Theme" uid="uid://bpj776m3gkae4" path="res://main_theme.tres" id="1_qu2t4"]
+[ext_resource type="AudioStream" uid="uid://b22wy6veir22c" path="res://audio/audio_test.mp3" id="3_tp0do"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_krok1"]
 font_size = 60
+
+[sub_resource type="Theme" id="Theme_85gs0"]
+VBoxContainer/constants/separation = 20
 
 [sub_resource type="LabelSettings" id="LabelSettings_ahmdh"]
 font_size = 40
@@ -29,7 +33,10 @@ color = Color(0.27451, 0.32549, 0.384314, 1)
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 128.0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = -32.0
+offset_bottom = 157.0
 grow_horizontal = 2
 theme = ExtResource("1_qu2t4")
 text = "Options"
@@ -43,6 +50,7 @@ offset_left = 40.0
 offset_top = 128.0
 offset_right = 768.0
 offset_bottom = 800.0
+theme = SubResource("Theme_85gs0")
 alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/VBoxContainer"]
@@ -79,5 +87,15 @@ layout_mode = 2
 theme = ExtResource("1_qu2t4")
 value = 50.0
 
+[node name="main_menu" type="Button" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme = ExtResource("1_qu2t4")
+text = "Go back to main menù"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_tp0do")
+
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/HBoxContainer/volume_down" to="." method="_on_volume_down_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/HBoxContainer/volume_up" to="." method="_on_volume_up_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/main_menu" to="." method="_on_main_menu_pressed"]

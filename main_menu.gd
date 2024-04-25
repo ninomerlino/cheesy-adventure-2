@@ -16,7 +16,8 @@ func _on_play_pressed():
 
 
 func _on_options_pressed():
-	pass # Replace with function body.
+	var level = GlobalFunctions.get_game_scene(GlobalFunctions.GameScene.Options).instantiate()
+	replace_by(level)
 
 
 func _on_exit_pressed():
