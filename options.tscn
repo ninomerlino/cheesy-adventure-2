@@ -91,7 +91,7 @@ value = 50.0
 layout_mode = 2
 focus_mode = 0
 theme = ExtResource("1_qu2t4")
-text = "Go back to main menù"
+text = "Go back to main menu"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_tp0do")

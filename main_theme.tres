@@ -62,6 +62,11 @@ content_margin_top = 5.0
 content_margin_right = 0.0
 content_margin_bottom = 5.0
 bg_color = Color(0.584314, 0.639216, 0.643137, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.584314, 0.639216, 0.643137, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fnh3"]
 content_margin_left = 5.0
@@ -69,6 +74,11 @@ content_margin_top = 5.0
 content_margin_right = 5.0
 content_margin_bottom = 5.0
 bg_color = Color(0.988235, 0.266667, 0.0588235, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.584314, 0.639216, 0.643137, 1)
 
 [resource]
 default_font = ExtResource("3_em1tk")
@@ -99,3 +109,5 @@ ProgressBar/colors/font_outline_color = Color(1, 1, 1, 1)
 ProgressBar/constants/outline_size = 0
 ProgressBar/styles/background = SubResource("StyleBoxFlat_ch8lt")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_2fnh3")
+RichTextLabel/colors/default_color = Color(0.92549, 0.831373, 0.266667, 1)
+RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
